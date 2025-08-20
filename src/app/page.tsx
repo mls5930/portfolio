@@ -351,11 +351,16 @@ export default function Page() {
               </div>
               <div className="flex items-center gap-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100">
-                  🌐
+                  P
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">포트폴리오</h3>
-                  <p className="text-gray-700">현재 페이지</p>
+                  <a
+                    className="text-blue-700 hover:underline"
+                    href="https://portfolio-hazel-eight-6z0c6qi9rf.vercel.app/"
+                  >
+                    https://portfolio-hazel-eight-6z0c6qi9rf.vercel.app/
+                  </a>
                 </div>
               </div>
             </div>

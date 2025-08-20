@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 interface Project {
   title: string;
@@ -8,12 +8,14 @@ interface Project {
   githubUrl?: string;
   liveUrl?: string;
   userUrl?: string;
+  demoUrl?: string; // ✅ 시연 링크
 }
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="border rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
       <h3 className="text-xl font-bold mb-3 text-gray-800">{project.title}</h3>
+
       <div className="relative mb-4 rounded-lg overflow-hidden">
         <Image
           src={project.image}
@@ -23,8 +25,11 @@ export default function ProjectCard({ project }: { project: Project }) {
           className="object-contain w-full h-48"
         />
       </div>
-      <p className="mb-4 text-gray-600 leading-relaxed">{project.description}</p>
-      
+
+      <p className="mb-4 text-gray-600 leading-relaxed">
+        {project.description}
+      </p>
+
       {/* 기술 스택 */}
       <div className="mb-4">
         <div className="flex gap-2 flex-wrap">
@@ -38,7 +43,8 @@ export default function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       </div>
-      
+
+      {/* 액션 버튼들 */}
       <div className="flex gap-3 flex-wrap">
         {project.liveUrl ? (
           <a
@@ -54,6 +60,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             배포 준비중
           </span>
         )}
+
         {project.githubUrl && (
           <a
             href={project.githubUrl}
@@ -64,6 +71,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             GitHub
           </a>
         )}
+
         {project.userUrl && (
           <a
             href={project.userUrl}
@@ -74,7 +82,19 @@ export default function ProjectCard({ project }: { project: Project }) {
             유저 프로젝트 바로가기
           </a>
         )}
+
+        {/* ✅ 프로젝트 시연 버튼 (빨강) */}
+        {project.demoUrl && (
+          <a
+            href={project.demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-200"
+          >
+            프로젝트 시연
+          </a>
+        )}
       </div>
     </div>
   );
-} 
+}
