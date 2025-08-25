@@ -26,7 +26,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         />
       </div>
 
-      <p className="mb-4 text-gray-600 leading-relaxed">
+      <p className="mb-4 text-gray-600 leading-relaxed whitespace-pre-line">
         {project.description}
       </p>
 

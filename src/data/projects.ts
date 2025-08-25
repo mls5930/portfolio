@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     title: "MVE",
     description:
-      "Web3 기반의 음원 설문 플랫폼으로, 사용자는 음악에 대한 감상 설문에 참여하고 그 기록을 NFT로 발행하며 리워드를 받을 수 있는 구조입니다.\n\n⭐ ID: test@naver.com\n⭐ PS: test1234",
+      "Web3 기반의 음원 설문 플랫폼으로, 사용자는 음악에 대한 감상 설문에 참여하고 그 기록을 NFT로 발행하며 리워드를 받을 수 있는 구조입니다.\n⭐ ID: test@naver.com\n⭐ PS: test1234",
 
     image: "/MVE-admin.png",
     technologies: ["React", "TypeScript", "Node.js", "AWS", "Solidity"],
